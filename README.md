@@ -26,3 +26,7 @@ File.chmod(444, file.path)
 file.rewind
 Phantomjs.run("./path/to/trigger.js", file.path)
 ```
+
+This will generate the example pie chart from Google's documentation:
+
+https://developers.google.com/chart/interactive/docs/gallery/piechart
