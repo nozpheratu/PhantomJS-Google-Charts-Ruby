@@ -11,7 +11,7 @@ https://github.com/colszowka/phantomjs-gem
 
 ###Usage
 
-Call trigger.js and googleCharts.js from Ruby like this:
+Call trigger.js from Ruby like this:
 
 ```Ruby
 data = {"type" => "PieChart", "options" => {"title" => "Type of Fruit Eaten", "width" => "400", "height" => "300", "is3D" => true, "pieSliceText" => "value"}, "theData" => [['Task', 'Hours per Day'], ['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]}.to_json
