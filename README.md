@@ -5,7 +5,9 @@ PhantomJS-Google-Charts is a script that turns Google Charts charts into SVG on 
 
 https://github.com/pstephan1187/PhantomJS-Google-Charts
 
-This is a fork of PhantomJS-Google-Charts  that (1) is designed to use the same data syntax that Google shows in its documentation, and (b) is designed to be called from Ruby using the PhantomJS gem:
+This is a fork of PhantomJS-Google-Charts  that:
+    (1) is designed to use the same data syntax that Google shows in its documentation
+    (2) is designed to be called from Ruby using the PhantomJS gem:
 
 https://github.com/colszowka/phantomjs-gem
 
