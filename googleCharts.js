@@ -24,8 +24,17 @@ exports.generateChart = function(jsonData, callback){
 	
 	page.viewportSize = {width: jsonData.options.width, height: jsonData.options.height};
 	
-	//edit the line below if your chart requires more than the corechart module
-	page.content = '<html><head><title></title><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="https://www.google.com/jsapi"></script><script>google.load("visualization", "1.0", {"packages":["corechart"]});</script></head><body><div id="chart">Chart did not generate</div></body></html>';
+	// Add further options below as required if you need charts that use anything other than
+  // the 'corechart' or 'gauge' modules
+  
+  if (jsonData.type == "Gauge")
+  {
+    page.content = '<html><head><title></title><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="https://www.google.com/jsapi"></script><script>google.load("visualization", "1.0", {"packages":["gauge"]});</script></head><body><div id="chart">Chart did not generate</div></body></html>';
+  }
+  else
+  {
+  	page.content = '<html><head><title></title><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="https://www.google.com/jsapi"></script><script>google.load("visualization", "1.0", {"packages":["corechart"]});</script></head><body><div id="chart">Chart did not generate</div></body></html>';    
+  }
 	
 	page.onLoadFinished = function(){
 		info = page.evaluate(function(jsonData){
