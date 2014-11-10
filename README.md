@@ -18,5 +18,5 @@ file = Tempfile.new(['a', '.txt'], "#{Rails.root}/tmp")
 file.write(data)
 File.chmod(444, file.path)
 file.rewind
-Phantomjs.run("./app/assets/javascripts/trigger.js", file.path)
+Phantomjs.run("./path/to/trigger.js", file.path)
 ```
